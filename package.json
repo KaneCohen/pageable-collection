@@ -1,0 +1,26 @@
+{
+	"name": "pageable-collection",
+	"version": "0.1.0",
+	"description": "Simple pagination ontop of the Backbone Collection",
+	"main": "lib/pageable-collection.js",
+	"keywords": ["backbone", "plugin", "collection", "pager", "pagination"],
+	"author": {
+		"name": "Kane Cohen",
+		"email": "kanecohen@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/KaneCohen/pageable-collection.git"
+	}
+	"licenses": [
+		{
+			"type": "BSD",
+			"url": "https://github.com/KaneCohen/pageable-collection/blob/master/LICENSE"
+		}
+	],
+	"dependencies": {
+		"underscore": ">=1.4.0",
+		"backbone": ">=1.1.0"
+	}
+}
+
