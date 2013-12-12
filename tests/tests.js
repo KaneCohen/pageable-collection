@@ -16,13 +16,16 @@
 
   });
 
-  test("initial check and state sanity check", 12, function() {
+  test("initial check and state sanity check", 13, function() {
     equal(col.getMode(), 'server');
     equal(col.hasPrevPage(), false);
     equal(col.getOffset(), 0);
     equal(col.state.currentPage, 1);
     equal(col.state.firstPage, 1);
     equal(col.state.lastPage, 0);
+
+		col.setCurrentPage('2');
+    equal(col.state.currentPage, 2);
 
 		col.setCurrentPage(2);
 		col.setMode('client');
