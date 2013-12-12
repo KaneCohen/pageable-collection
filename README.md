@@ -1,9 +1,9 @@
 # Pageable Collection for Backbone
 
-Inspired by [backbone-pageable](https://github.com/wyuenho/backbone-pageable), simple pagination for default Backbone.Collection.
+Inspired by [backbone-pageable](https://github.com/wyuenho/backbone-pageable), simple pagination replacement for Backbone.Collection.
 
 Nothing too special, i'd recommend checking source code for more details, but all in all, this is just a
-notam collection with extra functions that you can use to fetch required paginated data from the server and
+normal Collection with extra functions that you can use to fetch required paginated data from the server and
 render simple pagination links whenever you want.
 
 Comes with a reasonable defaults which would allow you to use Pageable Collection from the get go with
