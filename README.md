@@ -11,13 +11,13 @@ only several lines of extra backend code.
 
 ## How to use
 
-1. Add link after backbone:
+1\. Add link after backbone:
 
 ````javascript
 <script src="pageable-collection.min.js"></script>
 ````
 
-2. Back end setup:
+2\. Back end setup:
 
 Pageable Collection accepts 3 types of responses from the server.
 a) JSON response with state and items.
@@ -45,7 +45,7 @@ c) JSON response with models + HTTP headers with state data.
 ````
 Available Headers are: `X-Total`, `X-PerPage`, `X-CurrentPage`.
 
-3. Use instead of default Backbone.Collection:
+3\. Use instead of default Backbone.Collection:
 
 ````javascript
 var UsersCollection = Backbone.PageableCollection.extend({
