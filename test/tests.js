@@ -38,9 +38,10 @@
   });
 
   test("presenter", 2, function() {
-    ok(col.getPresenter() instanceof Backbone.View);
+		var presenter = col.getPresenter();
+    ok(new presenter instanceof Backbone.View);
 		col.length = 40;
-		equal(col.getPresenter().getMoreLink(), '<li class="page-next page-more"><a href="?page=2" data-page="2">More</a></li>');
+		equal(new presenter().getMoreLink(), '<li class="page-more"><a href="?page=2" data-page="2">More</a></li>');
 	});
 
   test("extend options", 1, function() {
