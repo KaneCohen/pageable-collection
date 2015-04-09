@@ -24,11 +24,11 @@
     equal(col.state.firstPage, 1);
     equal(col.state.lastPage, 0);
 
-		col.setCurrentPage('2');
+    col.setCurrentPage('2');
     equal(col.state.currentPage, 2);
 
-		col.setCurrentPage(2);
-		col.setMode('client');
+    col.setCurrentPage(2);
+    col.setMode('client');
     equal(col.getMode(), 'client');
     equal(col.hasPrevPage(), true);
     equal(col.getOffset(), 20);
@@ -38,25 +38,25 @@
   });
 
   test("presenter", 2, function() {
-		var presenter = col.getPresenter();
+    var presenter = col.getPresenter();
     ok(new presenter instanceof Backbone.View);
-		col.length = 40;
-		equal(new presenter().getMoreLink(), '<li class="page-more"><a href="?page=2" data-page="2">More</a></li>');
-	});
+    col.length = 40;
+    equal(new presenter().getMoreLink(), '<li class="page-more"><a href="?page=2" data-page="2">More</a></li>');
+  });
 
   test("extend options", 1, function() {
-		var nc = new (Backbone.PageableCollection.extend({
-			state: {
-				perPage: 10
-			}
-		}));
-		deepEqual(nc.state, {
-			currentPage: 1,
-			firstPage:   1,
-			lastPage:    0,
-			perPage:     10,
-			total:       0
-		});
-	});
+    var nc = new (Backbone.PageableCollection.extend({
+      state: {
+        perPage: 10
+      }
+    }));
+    deepEqual(nc.state, {
+      currentPage: 1,
+      firstPage:   1,
+      lastPage:    0,
+      perPage:     10,
+      total:       0
+    });
+  });
 
 })();
