@@ -44,6 +44,14 @@
     equal(new presenter().getMoreLink(), '<li class="page-more"><a href="?page=2" data-page="2">More</a></li>');
   });
 
+  test("set state check", 2, function() {
+    col.setState({total: 10});
+    equal(col.state.total, 10);
+
+    col.setState({total: 4});
+    equal(col.state.total, 4);
+  });
+
   test("extend options", 1, function() {
     var nc = new (Backbone.PageableCollection.extend({
       state: {
