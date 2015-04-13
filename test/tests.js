@@ -38,8 +38,9 @@
   });
 
   test("presenter", 2, function() {
+    col.appendParams = false;
     var presenter = col.getPresenter();
-    ok(new presenter instanceof Backbone.View);
+    ok(new presenter(col) instanceof Backbone.View);
     col.length = 40;
     equal(new presenter(col).getMoreLink(), '<li class="page-more"><a href="?page=2" data-page="2">More</a></li>');
   });

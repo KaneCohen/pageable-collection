@@ -70,7 +70,7 @@ render: function(collection) {
 
 	});
 	// Render paginator. **links** methood picks paginator automatically based on state.
-	this.$el.append(collection.links());
+	this.$el.append(collection.links().el);
 }
 ````
 

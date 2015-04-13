@@ -1,6 +1,6 @@
 {
   "name": "Pageable Collection",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "lib/pageable-collection.js",
   "ignore": [],
   "keywords": ["backbone", "pagination", "pager", "collection"],
