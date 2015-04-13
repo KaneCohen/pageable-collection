@@ -41,7 +41,7 @@
     var presenter = col.getPresenter();
     ok(new presenter instanceof Backbone.View);
     col.length = 40;
-    equal(new presenter().getMoreLink(), '<li class="page-more"><a href="?page=2" data-page="2">More</a></li>');
+    equal(new presenter(col).getMoreLink(), '<li class="page-more"><a href="?page=2" data-page="2">More</a></li>');
   });
 
   test("set state check", 2, function() {
