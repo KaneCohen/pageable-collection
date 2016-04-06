@@ -17,6 +17,12 @@
           return 'http://example.com';
         }
       });
+      calObjCol = new Backbone.PageableCollection([a,b,c,d], {
+        url: function() {
+          return 'http://' + this.test + '.com';
+        }
+      });
+      calObjCol.test = 'example';
     }
 
   });
@@ -50,12 +56,20 @@
     equal(new presenter(col).getMoreLink(), '<li class="page-more"><a href="?page=2" data-page="2">More</a></li>');
   });
 
-  test("presenter", 2, function() {
+  test("callable url", 2, function() {
     calCol.appendParams = false;
     var presenter = calCol.getPresenter();
     ok(new presenter(calCol) instanceof Backbone.View);
     calCol.length = 40;
     equal(new presenter(calCol).getMoreLink(), '<li class="page-more"><a href="http://example.com?page=2" data-page="2">More</a></li>');
+  });
+
+  test("callable url", 2, function() {
+    calObjCol.appendParams = false;
+    var presenter = calObjCol.getPresenter();
+    ok(new presenter(calObjCol) instanceof Backbone.View);
+    calObjCol.length = 40;
+    equal(new presenter(calObjCol).getMoreLink(), '<li class="page-more"><a href="http://example.com?page=2" data-page="2">More</a></li>');
   });
 
   test("set state check", 2, function() {
