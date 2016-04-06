@@ -12,6 +12,11 @@
       e         = null;
       col       = new Backbone.PageableCollection([a,b,c,d]);
       otherCol  = new Backbone.PageableCollection();
+      calCol    = new Backbone.PageableCollection([a,b,c,d], {
+        url: function() {
+          return 'http://example.com';
+        }
+      });
     }
 
   });
@@ -43,6 +48,14 @@
     ok(new presenter(col) instanceof Backbone.View);
     col.length = 40;
     equal(new presenter(col).getMoreLink(), '<li class="page-more"><a href="?page=2" data-page="2">More</a></li>');
+  });
+
+  test("presenter", 2, function() {
+    calCol.appendParams = false;
+    var presenter = calCol.getPresenter();
+    ok(new presenter(calCol) instanceof Backbone.View);
+    calCol.length = 40;
+    equal(new presenter(calCol).getMoreLink(), '<li class="page-more"><a href="http://example.com?page=2" data-page="2">More</a></li>');
   });
 
   test("set state check", 2, function() {
