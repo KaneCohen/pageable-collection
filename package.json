@@ -1,6 +1,6 @@
 {
   "name": "pageable-collection",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Simple pagination ontop of the Backbone Collection",
   "main": "lib/pageable-collection.js",
   "keywords": ["backbone", "plugin", "collection", "pager", "pagination"],
