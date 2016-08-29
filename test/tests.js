@@ -91,7 +91,18 @@
       firstPage:   1,
       lastPage:    0,
       perPage:     10,
-      total:       0
+      total:       0,
+      pageSelectorValues: [
+        10,
+        30,
+        60,
+        120,
+        180,
+        240,
+        300
+      ],
+      perPage: 10,
+      showPerPageSelector: false
     });
   });
 
