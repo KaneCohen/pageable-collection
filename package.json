@@ -1,6 +1,6 @@
 {
   "name": "pageable-collection",
-  "version": "0.2.3",
+  "version": "0.3.1",
   "description": "Simple pagination ontop of the Backbone Collection",
   "main": "lib/pageable-collection.js",
   "keywords": ["backbone", "plugin", "collection", "pager", "pagination"],
@@ -20,7 +20,10 @@
   ],
   "dependencies": {
     "underscore": ">=1.6.0",
-    "backbone": ">=1.1.2",
+    "backbone": ">=1.1.2"
+  },
+  "devDependencies": {
+    "bower": "1.7.9",
     "gulp": "~3.8.10",
     "gulp-uglifyjs": "~0.5.0",
     "gulp-nodeunit-runner": "~0.2.2",
